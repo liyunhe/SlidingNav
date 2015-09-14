@@ -15,6 +15,7 @@
 		42E0BB621BA6F58E001E48BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E0BB611BA6F58E001E48BE /* Images.xcassets */; };
 		42E0BB651BA6F58E001E48BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E0BB631BA6F58E001E48BE /* LaunchScreen.xib */; };
 		42E0BB711BA6F58E001E48BE /* SlidingNavTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E0BB701BA6F58E001E48BE /* SlidingNavTests.m */; };
+		42E0BB7D1BA6F5D2001E48BE /* SlidingNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E0BB7C1BA6F5D2001E48BE /* SlidingNavView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		42E0BB6A1BA6F58E001E48BE /* SlidingNavTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlidingNavTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E0BB6F1BA6F58E001E48BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42E0BB701BA6F58E001E48BE /* SlidingNavTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidingNavTests.m; sourceTree = "<group>"; };
+		42E0BB7B1BA6F5D2001E48BE /* SlidingNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingNavView.h; sourceTree = "<group>"; };
+		42E0BB7C1BA6F5D2001E48BE /* SlidingNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingNavView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		42E0BB501BA6F58E001E48BE /* SlidingNav */ = {
 			isa = PBXGroup;
 			children = (
+				42E0BB7A1BA6F5A0001E48BE /* SlidingNavView */,
 				42E0BB551BA6F58E001E48BE /* AppDelegate.h */,
 				42E0BB561BA6F58E001E48BE /* AppDelegate.m */,
 				42E0BB5B1BA6F58E001E48BE /* ViewController.h */,
@@ -120,6 +124,15 @@
 				42E0BB6F1BA6F58E001E48BE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42E0BB7A1BA6F5A0001E48BE /* SlidingNavView */ = {
+			isa = PBXGroup;
+			children = (
+				42E0BB7B1BA6F5D2001E48BE /* SlidingNavView.h */,
+				42E0BB7C1BA6F5D2001E48BE /* SlidingNavView.m */,
+			);
+			name = SlidingNavView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42E0BB571BA6F58E001E48BE /* AppDelegate.m in Sources */,
+				42E0BB7D1BA6F5D2001E48BE /* SlidingNavView.m in Sources */,
 				42E0BB5A1BA6F58E001E48BE /* SlidingNav.xcdatamodeld in Sources */,
 				42E0BB5D1BA6F58E001E48BE /* ViewController.m in Sources */,
 				42E0BB541BA6F58E001E48BE /* main.m in Sources */,
