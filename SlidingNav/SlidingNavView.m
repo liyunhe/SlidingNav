@@ -6,7 +6,7 @@
 //  Created by Yun_He_Lee on 15/9/14.
 //  Copyright (c) 2015年 lee. All rights reserved.
 //
-
+#import "YH_Btn.h"
 #import "SlidingNavView.h"
 #define kNavCursorHeight 1
 #define kScreenWidth  [[UIScreen mainScreen] bounds].size.width
@@ -29,12 +29,12 @@
         // 导航按钮
         _navBtnArray = [[NSMutableArray alloc] init];
         for (int i = 0; i < titles.count; i++) {
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            YH_Btn *button = [[YH_Btn alloc]init];
+            [button setBackgroundColor:[UIColor whiteColor]];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             button.tag = i;
             button.titleLabel.font = [UIFont systemFontOfSize:14];
             [button setTitle:titles[i] forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
             [button addTarget:self action:@selector(selectHouseAction:) forControlEvents:UIControlEventTouchUpInside];
             [_navBtnArray addObject:button];
             [self addSubview:button];
@@ -96,5 +96,4 @@
         }
     }
 }
-
 @end

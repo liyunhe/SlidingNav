@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42DAF6971C804FE6002802E0 /* BaseTableViewVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DAF6961C804FE6002802E0 /* BaseTableViewVc.m */; };
+		42DAF69A1C805517002802E0 /* YH_Btn.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DAF6991C805517002802E0 /* YH_Btn.m */; };
 		42E0BB541BA6F58E001E48BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E0BB531BA6F58E001E48BE /* main.m */; };
 		42E0BB571BA6F58E001E48BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E0BB561BA6F58E001E48BE /* AppDelegate.m */; };
 		42E0BB5A1BA6F58E001E48BE /* SlidingNav.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42E0BB581BA6F58E001E48BE /* SlidingNav.xcdatamodeld */; };
@@ -29,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42DAF6951C804FE6002802E0 /* BaseTableViewVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewVc.h; sourceTree = "<group>"; };
+		42DAF6961C804FE6002802E0 /* BaseTableViewVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewVc.m; sourceTree = "<group>"; };
+		42DAF6981C805517002802E0 /* YH_Btn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YH_Btn.h; sourceTree = "<group>"; };
+		42DAF6991C805517002802E0 /* YH_Btn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YH_Btn.m; sourceTree = "<group>"; };
 		42E0BB4E1BA6F58E001E48BE /* SlidingNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidingNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E0BB521BA6F58E001E48BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42E0BB531BA6F58E001E48BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -131,6 +137,10 @@
 			children = (
 				42E0BB7B1BA6F5D2001E48BE /* SlidingNavView.h */,
 				42E0BB7C1BA6F5D2001E48BE /* SlidingNavView.m */,
+				42DAF6951C804FE6002802E0 /* BaseTableViewVc.h */,
+				42DAF6961C804FE6002802E0 /* BaseTableViewVc.m */,
+				42DAF6981C805517002802E0 /* YH_Btn.h */,
+				42DAF6991C805517002802E0 /* YH_Btn.m */,
 			);
 			name = SlidingNavView;
 			sourceTree = "<group>";
@@ -235,9 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DAF69A1C805517002802E0 /* YH_Btn.m in Sources */,
 				42E0BB571BA6F58E001E48BE /* AppDelegate.m in Sources */,
 				42E0BB7D1BA6F5D2001E48BE /* SlidingNavView.m in Sources */,
 				42E0BB5A1BA6F58E001E48BE /* SlidingNav.xcdatamodeld in Sources */,
+				42DAF6971C804FE6002802E0 /* BaseTableViewVc.m in Sources */,
 				42E0BB5D1BA6F58E001E48BE /* ViewController.m in Sources */,
 				42E0BB541BA6F58E001E48BE /* main.m in Sources */,
 			);
@@ -434,6 +446,7 @@
 				42E0BB761BA6F58E001E48BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42E0BB771BA6F58E001E48BE /* Build configuration list for PBXNativeTarget "SlidingNavTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +455,7 @@
 				42E0BB791BA6F58E001E48BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

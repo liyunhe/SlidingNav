@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "SlidingNavView.h"
+#import "BaseTableViewVc.h"
+
 @interface ViewController ()<UIScrollViewDelegate>
 @property (nonatomic, strong)SlidingNavView *houseNavView;
 @property (nonatomic, strong)UIScrollView *scrollView;
@@ -16,25 +18,19 @@
 @implementation ViewController
 {
     NSArray *titles;
+    NSArray *titles_Vc;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //添加3个Viewc测试
-    UIView *view =[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [view setBackgroundColor:[UIColor redColor]];
-    UIView *view1 =[[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [view1 setBackgroundColor:[UIColor yellowColor]];
-    UIView *view2 =[[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width*2, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [view2 setBackgroundColor:[UIColor orangeColor]];
-    
-    //title
-    titles = @[@"one", @"two",@"three"];
+     titles = @[@"one", @"two",@"three"];
+    [self addController];
+    /** 添加子控制器 */
     [self.view addSubview:self.scrollView];
     [self.view addSubview:self.houseNavView];
-    [self.scrollView addSubview:view];
-    [self.scrollView addSubview:view1];
-    [self.scrollView addSubview:view2];
+    titles_Vc = self.childViewControllers;
+    BaseTableViewVc *tableView = titles_Vc[0];
+    [self.scrollView addSubview:tableView.view];
     //弱引用 防止循环引用
     __weak __typeof(self) weakSelf = self;
     self.houseNavView.slidingNavViewBlock = ^(NSInteger selectIndex) {
@@ -42,7 +38,13 @@
         [weakSelf setCurrentPage:selectIndex];
     };
 }
-
+- (void)addController
+{
+    for (int i=0 ; i<titles.count ;i++){
+        BaseTableViewVc *vc1 = [[BaseTableViewVc alloc]initWithStyle:UITableViewStylePlain];
+        [self addChildViewController:vc1];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -80,6 +82,8 @@
 - (void)setCurrentPage:(NSInteger)currentPage {
     [UIView animateWithDuration:0.2 animations:^{
          self.scrollView.contentOffset = CGPointMake(self.view.frame.size.width * currentPage, 0);
+         BaseTableViewVc *tableView = titles_Vc[currentPage];
+        [self.scrollView addSubview:tableView.view];
     }];
     
 }
